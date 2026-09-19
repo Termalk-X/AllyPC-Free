@@ -1,11 +1,16 @@
-name: Windows Cloud PC
+name: Windows Cloud Desktop
+
 on:
   workflow_dispatch:
+
 jobs:
-  windows:
+  desktop:
     runs-on: windows-latest
+
     steps:
-      - name: Show Windows information
+      - name: Keep Windows runner alive
         run: |
-          systeminfo
-          echo "Windows runner aktif!"
+          Write-Host "Windows Cloud Desktop aktif"
+          while ($true) {
+            Start-Sleep -Seconds 60
+          }
