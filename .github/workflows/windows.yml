@@ -1,12 +1,9 @@
 name: Windows Cloud PC
-
 on:
   workflow_dispatch:
-
 jobs:
   windows:
     runs-on: windows-latest
-
     steps:
       - name: Show Windows information
         run: |
